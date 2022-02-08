@@ -1,0 +1,44 @@
+{
+    "name": "ClickShare Extension",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "click.png"
+    },
+    "icons": {
+        "128": "click.png"
+    },
+    "commands": {
+        "_execute_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+          },
+          "description": "Opens popup.html"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [ {
+        "js": [ "deleteClicker.js" ],
+        "matches": [ "*://*/*" ]
+     }],
+    "externally_connectable": {
+        "ids": ["*"],
+        "matches": [
+            "https://4d25-128-237-82-5.ngrok.io/*",
+            "https://localhost/",
+            "https://clickshare.one/*"
+        ]
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["click.png"],
+            "matches": ["<all_urls>"]
+            }],
+    "permissions": ["storage", "activeTab", "scripting", "tabs"]
+    
+}
