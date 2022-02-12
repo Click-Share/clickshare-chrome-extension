@@ -5,10 +5,10 @@
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "click.png"
+        "default_icon": "click-color.png"
     },
     "icons": {
-        "128": "click.png"
+        "128": "click-color.png"
     },
     "commands": {
         "_execute_action": {
