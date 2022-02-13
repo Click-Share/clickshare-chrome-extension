@@ -36,7 +36,7 @@
     },
     "web_accessible_resources": [
         {
-            "resources": ["click.png"],
+            "resources": ["click-color.png"],
             "matches": ["<all_urls>"]
             }],
     "permissions": ["storage", "activeTab", "scripting", "tabs"]

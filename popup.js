@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const img = new Image();
 
           img.id = "clickshare-cursor";
-          img.src = chrome.runtime.getURL("./click.png");
+          img.src = chrome.runtime.getURL("./click-color.png");
           Object.assign(img.style, {
             position: "fixed",
             width: "40px",
